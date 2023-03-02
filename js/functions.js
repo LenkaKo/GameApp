@@ -40,6 +40,10 @@ function getMoveName(argMoveId) {
     return 'papier';
   } else if (argMoveId == 3) {
     return 'nozyce';
+  } else {
+    printMessage('Nie znam ruchu' + argMoveId + ' Chyba nie ma takiej opcji.');
+    return 'eror';
+  }
 }
 
 function displayResult(argPlayerMove, argComputerMove) {
