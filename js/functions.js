@@ -8,7 +8,7 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
 
-var computerMove, randomNumber;
+let computerMove, randomNumber;
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 if (randomNumber == '1') {
@@ -31,8 +31,6 @@ if (playerInput == '1') {
   playerMove = 'nozyce';
 }
 printMessage('Twój ruch: ' + playerMove);
-
-var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
 
 function getMoveName(argMoveId) {
   console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
