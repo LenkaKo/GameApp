@@ -20,7 +20,7 @@ if (randomNumber == '1') {
 }
 printMessage('Mój ruch: ' + computerMove);
 
-var playerInput, playerMove;
+let playerInput, playerMove;
 playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Wpisana odpowiedź to: ' + playerInput);
 if (playerInput == '1') {
@@ -40,37 +40,27 @@ function getMoveName(argMoveId) {
     return 'papier';
   } else if (argMoveId == 3) {
     return 'nozyce';
-  } else {
-    printMessage('Nie znam ruchu' + argMoveId + ' Chyba nie ma takiej opcji.');
-    return 'eror';
-  }
 }
 
 function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
     printMessage('Wygrywasz!');
-  } else if (rgPlayerMove == 'nozyce' && argComputerMove == 'papier') {
+  } else if (argPlayerMove == 'nozyce' && argComputerMove == 'papier') {
     printMessage('Wygrywasz!');
-  } else if (rgPlayerMove == 'kamień' && argComputerMove == 'nozyce') {
+  } else if (argPlayerMove == 'kamień' && argComputerMove == 'nozyce') {
     printMessage('Wygrywasz!');
-  } else if (rgPlayerMove == 'kamień' && argComputerMove == 'kamień') {
+  } else if (argPlayerMove == 'kamień' && argComputerMove == 'kamień') {
     printMessage('Remis!');
-  } else if (rgPlayerMove == 'papier' && argComputerMove == 'papier') {
+  } else if (argPlayerMove == 'papier' && argComputerMove == 'papier') {
     printMessage('Remis!');
-  } else if (rgPlayerMove == 'nozyce' && argComputerMove == 'nozyce') {
+  } else if (argPlayerMove == 'nozyce' && argComputerMove == 'nozyce') {
     printMessage('Remis!');
   } else {
     printMessage('Przegrywasz :(');
   }
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
-playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-console.log('wybór ruchu gracza to: ' + playerInput);
-playerMove = getMoveName(playerInput);
-console.log('ruch gracza to: ' + playerMove);
-randomNumber = Math.floor(Math.random() * 3 + 1);
-console.log('wylosowana liczba to: ' + randomNumber);
-computerMove = getMoveName(randomNumber);
+
 console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove);
