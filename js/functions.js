@@ -32,20 +32,6 @@ if (playerInput == '1') {
 }
 printMessage('Twój ruch: ' + playerMove);
 
-function getMoveName(argMoveId) {
-  console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
-  if (argMoveId == 1) {
-    return 'kamień';
-  } else if (argMoveId == 2) {
-    return 'papier';
-  } else if (argMoveId == 3) {
-    return 'nozyce';
-  } else {
-    printMessage('Nie znam ruchu' + argMoveId + ' Chyba nie ma takiej opcji.');
-    return 'eror';
-  }
-}
-
 function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
