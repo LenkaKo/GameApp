@@ -1,7 +1,4 @@
-# javascript-prework
 
-Specyfikacja projektu
-Docelowo chcielibyśmy, aby całość działała w następujący sposób:
 
 na ekranie znajdują się komunikat "papier", "kamień", "nożyce", umożliwiające graczowi wybór zagrania,
 skrypt losuje swoje zagranie,
